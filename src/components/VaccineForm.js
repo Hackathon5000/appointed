@@ -24,6 +24,10 @@ export default class VaccineForm extends Component {
             <label> Email </label> <StyledInput placeholder="Email" />
           </Form.Field>{" "}
           <Form.Field required>
+            <label> Phone Number </label>{" "}
+            <StyledInput placeholder="Phone Number" />
+          </Form.Field>{" "}
+          <Form.Field required>
             <label> Date of Birth </label> <StyledDatePicker />
           </Form.Field>
         </Form>
