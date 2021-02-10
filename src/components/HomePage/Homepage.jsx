@@ -1,6 +1,6 @@
 import React from 'react'
 
-const maskInfo = () => {
+const Homepage = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const maskInfo = () => {
     )
 }
 
-export default maskInfo
+export default Homepage
