@@ -8,8 +8,7 @@ import DistanceInfo from "./components/distanceInfo/distanceInfo";
 import MaskInfo from "./components/maskInfo/maskInfo";
 import Nav from "./components/Nav/nav";
 import About from "./components/about/about";
-import { Form, Input } from "semantic-ui-react";
-import DatePicker from "react-datepicker";
+
 
 function App() {
   return (
@@ -36,20 +35,6 @@ function App() {
             <MaskInfo />
           </Route>
         </Switch>
-        <Form>
-          <Form.Field required>
-            <label> First Name </label> <Input placeholder="Legal Name" />
-          </Form.Field>{" "}
-          <Form.Field required>
-            <label> Last Name </label> <Input placeholder="Legal Name" />
-          </Form.Field>{" "}
-          <Form.Field required>
-            <label> Email </label> <Input placeholder="Email" />
-          </Form.Field>{" "}
-          <Form.Field required>
-            <label> Date of Birth </label> <DatePicker />
-          </Form.Field>
-        </Form>
       </main>
       <footer>Hello from footer</footer>
     </div>
