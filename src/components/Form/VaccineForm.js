@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input } from "semantic-ui-css";
+import { Form, Input } from "semantic-ui-react";
 import DatePicker from "react-datepicker";
 import styled from "styled-components";
 
@@ -29,8 +29,8 @@ export default class VaccineForm extends Component {
           </Form.Field>{" "}
           <Form.Field required>
             <label> Date of Birth </label> <StyledDatePicker />
-          </Form.Field>
-        </Form>
+          </Form.Field>{" "}
+        </Form>{" "}
       </div>
     );
   }

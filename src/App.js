@@ -8,7 +8,7 @@ import DistanceInfo from "./components/distanceInfo/distanceInfo";
 import MaskInfo from "./components/maskInfo/maskInfo";
 import Nav from "./components/Nav/nav";
 import About from "./components/about/about";
-
+import VaccineForm from "./components/Form/VaccineForm";
 
 function App() {
   return (
@@ -33,6 +33,12 @@ function App() {
           </Route>
           <Route exact path="/maskinfo">
             <MaskInfo />
+          </Route>
+          <Route exact path="/maskinfo">
+            <MaskInfo />
+          </Route>
+          <Route exact path="/vaccineform">
+            <VaccineForm />
           </Route>
         </Switch>
       </main>
