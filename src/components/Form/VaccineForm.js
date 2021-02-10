@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import { Form, Input } from "semantic-ui-react";
 import DatePicker from "react-datepicker";
-// import styled from "styled-components";
+
+const Options = [
+  { key: "y", text: "Yes", value: "true" },
+  { key: "n", text: "No", value: "false" },
+];
 
 export default class VaccineForm extends Component {
   render() {
-    // const StyledInput = styled(Input)`
-    //   width: 50%;
-    // `;
-    // const StyledDatePicker = styled(DatePicker)`
-    //   width: 50%;
-    // `;
     return (
       <div>
         <h1>Testing</h1>
@@ -39,6 +37,34 @@ export default class VaccineForm extends Component {
             <label> Date of Birth </label>{" "}
             <DatePicker error="Please enter your date of birth" fluid />
           </Form.Field>{" "}
+          <Form.Select
+            required
+            options={Options}
+            placeholder="Florida Resident"
+          />
+          <Form.Select
+            required
+            options={Options}
+            placeholder="Current Epi-Pen User"
+          />
+          <Form.Select
+            required
+            options={Options}
+            placeholder="Front Line Medical Worker"
+          />
+          <Form.Select
+            required
+            options={Options}
+            placeholder="Are you seeking your first dose?"
+          />
+          <Form.Field required>
+            <label> Zipcode </label>{" "}
+            <Input
+              error="Please enter your phone number"
+              fluid
+              placeholder="Zip Code"
+            />
+          </Form.Field>
         </Form>{" "}
       </div>
     );
