@@ -10,7 +10,7 @@ import DistanceInfo from './components/distanceInfo/distanceInfo';
 import MaskInfo from './components/maskInfo/maskInfo';
 import Nav from './components/Nav/nav';
 import About from './components/about/about';
-import VaccineForm from './components/Form/vaccineForm.jsx';
+import VaccineForm from './components/vaccineForm/vaccineForm.jsx';
 import Homepage from './components/homepage/homepage.js';
 import VaccInfo from './components/vaccInfo/vaccInfo.js';
 
