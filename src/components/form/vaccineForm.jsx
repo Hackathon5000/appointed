@@ -12,6 +12,10 @@ export default function VaccineForm() {
   const [checked, setChecked] = useState(false);
   const handleClick = () => setChecked(!checked);
   const [zipCode, setZipCode] = useState(" ");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`You have been pre-registered to receive the vaccine!`);
+  };
   const ParentDiv = styled.div`
     display: flex;
     justify-content: center;
@@ -28,7 +32,7 @@ export default function VaccineForm() {
     <div>
       <h1>Pre-Register Now For The COVID-19 Vaccine</h1>
       <ParentDiv>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Input
             label="First Name"
             placeholder="First Name"
@@ -90,7 +94,7 @@ export default function VaccineForm() {
             value={zipCode}
             onChange={(event) => setZipCode(event.target.value)}
           />
-          <ButtonColor type="submit" animated>
+          <ButtonColor animated type="submit" value="Submit">
             <StyledButtonText visible>REGISTER</StyledButtonText>
             <StyledButtonText hidden>
               <Icon name="arrow right" />
