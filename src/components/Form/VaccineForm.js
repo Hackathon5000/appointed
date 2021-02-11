@@ -25,6 +25,12 @@ export default function VaccineForm() {
     position: relative;
     left: 525px;
   `;
+  const ButtonBackground = styled(Button)`
+    background-color: #1da4bb;
+  `;
+  const StyledButtonText = styled(Button.Content)`
+    color: #ffffff;
+  `;
   return (
     <div>
       <h1>Pre-Register Now For The COVID-19 Vaccine</h1>
@@ -56,12 +62,12 @@ export default function VaccineForm() {
           placeholder="Enter your Zip Code"
           width={3}
         />
-        <Button animated>
-          <Button.Content visible>REGISTER</Button.Content>
-          <Button.Content hidden>
+        <ButtonBackground animated>
+          <StyledButtonText visible>REGISTER</StyledButtonText>
+          <StyledButtonText hidden>
             <Icon name="arrow right" />
-          </Button.Content>
-        </Button>
+          </StyledButtonText>
+        </ButtonBackground>
       </Form>{" "}
     </div>
   );
