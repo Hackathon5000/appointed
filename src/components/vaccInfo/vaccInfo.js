@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../UserContext.js';
-import Form from '../Form/vaccineForm.jsx'
+import VaccineForm from '../vaccineForm/vaccineForm.jsx'
 const VaccInfo = () => {
+
 	const { vaccCenter, searchString, centersinZip, getSearchData } = useContext(UserContext);
 	if (vaccCenter.zipcode !== searchString) {
 		return <h1>Can't find a location with the vaccine in your Zip code</h1>;
@@ -19,7 +20,7 @@ const VaccInfo = () => {
 				</h3>
 				<h4>Do they have the vaccine? {vaccCenter.havevaccine.toString()}</h4>
                 {centersinZip[0]}
-                <Form/>
+                <VaccineForm/>
 			</>
 		);
 	}
