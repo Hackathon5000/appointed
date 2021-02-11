@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 // import { Input } from 'antd';
 // import { useCombobox } from 'downshift';
 import { Router, Switch, Route, Link } from 'react-router-dom';
-import { Homepage } from './Components';
+import { Homepage } from './components';
 	//  Distanceinfo, 
 	// , Maskinfo, Map
 import { UserContext } from './UserContext';
