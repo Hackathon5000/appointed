@@ -18,7 +18,7 @@ const VaccInfo = () => {
 					{vaccCenter.address},{vaccCenter.city},{vaccCenter.state},
 					{vaccCenter.zipcode}
 				</h3>
-				<h4>Do they have the vaccine? {vaccCenter.havevaccine.toString()}</h4>
+				<h2>Congratulations! Your zipcode does have a location with the vaccine</h2>
                 {centersinZip[0]}
                 <VaccineForm/>
 			</>
