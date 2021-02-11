@@ -8,6 +8,7 @@ const Headers = () => {
 				<h2>Provide your Zip Code to find the nearest Vaccination center</h2>
 			</div>
 			<Zipcode />
+            
 		</div>
 	);
 };
