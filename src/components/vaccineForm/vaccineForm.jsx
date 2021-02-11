@@ -22,9 +22,6 @@ export default function VaccineForm() {
       <h1>Pre-Register Now For The COVID-19 Vaccine</h1>
       <ParentDiv>
         <Form>
-          <Form.Input label="Name" placeholder="Enter your full legal name" />
-          <Form.Input label="Email" placeholder="example@example.com" />
-          <Form.Input label="Phone Number" placeholder="1234567890" />
           <Form.Field>
             <label> Date of Birth </label>{" "}
             <DatePicker
@@ -32,6 +29,9 @@ export default function VaccineForm() {
               onChange={(date) => setSelectedDate(date)}
             />
           </Form.Field>{" "}
+          <Form.Input label="Name" placeholder="Enter your full legal name" />
+          <Form.Input label="Email" placeholder="example@example.com" />
+          <Form.Input label="Phone Number" placeholder="1234567890" />
           <Form.Checkbox inline label="Florida Resident" />
           <Form.Checkbox inline label="Current Epi-Pen User" />
           <Form.Checkbox inline label="Front Line Medical Worker" />

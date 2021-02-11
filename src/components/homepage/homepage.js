@@ -4,7 +4,7 @@ const Headers = () => {
 	return (
 		<div>
 			<div className='jumbotron text-center'>
-				<h1>Welcome to Miami Vaxx</h1>
+				<h1>Welcome to Miami Vax</h1>
 				<h2>Provide your Zip Code to find the nearest Vaccination center</h2>
 			</div>
 			<Zipcode />
