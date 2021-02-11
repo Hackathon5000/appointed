@@ -9,13 +9,28 @@ export default function VaccineForm() {
   const [email, setEmail] = useState(" ");
   const [phoneNumber, setPhoneNumber] = useState(" ");
   const [selectedDate, setSelectedDate] = useState(null);
-  const [checked, setChecked] = useState(false);
-  const handleClick = () => setChecked(!checked);
+  const [checkedResident, setCheckedResident] = useState(false);
+  const handleClickResident = () => setCheckedResident(!checkedResident);
+  const [checkedUser, setCheckedUser] = useState(false);
+  const handleClickUser = () => setCheckedUser(!checkedUser);
+  const [checkedWorker, setCheckedWorker] = useState(false);
+  const handleClickWorker = () => setCheckedWorker(!checkedWorker);
+  const [checkedDose, setCheckedDose] = useState(false);
+  const handleClickDose = () => setCheckedDose(!checkedDose);
   const [zipCode, setZipCode] = useState(" ");
   const handleSubmit = (event) => {
     event.preventDefault();
     alert(`You have been pre-registered to receive the vaccine!`);
   };
+  const Body = styled.div`
+    font-family: Inter;
+  `;
+  const Heading = styled.h1`
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: #373f41;
+  `;
   const ParentDiv = styled.div`
     display: flex;
     justify-content: center;
@@ -29,8 +44,8 @@ export default function VaccineForm() {
     color: #ffffff;
   `;
   return (
-    <div>
-      <h1>Pre-Register Now For The COVID-19 Vaccine</h1>
+    <Body>
+      <Heading>Pre-Register Now For The COVID-19 Vaccine</Heading>
       <ParentDiv>
         <Form onSubmit={handleSubmit}>
           <Form.Input
@@ -67,26 +82,26 @@ export default function VaccineForm() {
           <Form.Checkbox
             inline
             label="Florida Resident"
-            onClick={handleClick}
-            checked={checked}
+            onClick={handleClickResident}
+            checked={checkedResident}
           />
           <Form.Checkbox
             inline
             label="Current Epi-Pen User"
-            onClick={handleClick}
-            checked={checked}
+            onClick={handleClickUser}
+            checked={checkedUser}
           />
           <Form.Checkbox
             inline
             label="Front Line Medical Worker"
-            onClick={handleClick}
-            checked={checked}
+            onClick={handleClickWorker}
+            checked={checkedWorker}
           />
           <Form.Checkbox
             inline
             label="Are you seeking your first dose?"
-            onClick={handleClick}
-            checked={checked}
+            onClick={handleClickDose}
+            checked={checkedDose}
           />
           <Form.Input
             label="Zip Code"
@@ -102,6 +117,6 @@ export default function VaccineForm() {
           </ButtonColor>
         </Form>{" "}
       </ParentDiv>
-    </div>
+    </Body>
   );
 }
