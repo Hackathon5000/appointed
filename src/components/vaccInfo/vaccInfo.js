@@ -3,7 +3,7 @@ import { UserContext } from '../../UserContext.js';
 import VaccineForm from '../vaccineForm/vaccineForm.jsx'
 const VaccInfo = () => {
 
-	const { vaccCenter, searchString, centersinZip, getSearchData } = useContext(UserContext);
+	const { vaccCenter, searchString, centersinZip } = useContext(UserContext);
 	if (vaccCenter.zipcode !== searchString) {
 		return <h1>Can't find a location with the vaccine in your Zip code</h1>;
 	} else if (vaccCenter.zipcode === searchString && vaccCenter.havevaccine !== true) {

@@ -5,9 +5,6 @@ import { UserContext } from './UserContext';
 import './App.css';
 
 // import Home from './components/home/home';
-import Information from './components/information/information';
-import DistanceInfo from './components/distanceInfo/distanceInfo';
-import MaskInfo from './components/maskInfo/maskInfo';
 import Nav from './components/Nav/nav';
 import About from './components/about/about';
 import VaccineForm from './components/vaccineForm/vaccineForm.jsx';
@@ -15,9 +12,6 @@ import Homepage from './components/homepage/homepage.js';
 import VaccInfo from './components/vaccInfo/vaccInfo.js';
 
 function App() {
-	const [searchString, setSearchString] = useState('');
-  const [vaccCenter, setVaccCenter] = useState([]);
-  const centersinZip = []
 	const data = [
 		{
 			name: 'Jackson Memorial Hospital',
@@ -236,6 +230,9 @@ function App() {
 			havevaccine: false,
 		},
 	];
+	const [searchString, setSearchString] = useState('');
+  const [vaccCenter, setVaccCenter] = useState([]);
+  const centersinZip = []
 	const getSearchData = () => {
 		
 		for (let i = 0; i < data.length; i++) {    
@@ -265,20 +262,9 @@ function App() {
 				</header>
 				<main>
 					<Switch>
-						<Route exact path='/information'>
-							<Information />
-						</Route>
+						
 						<Route exact path='/about'>
 							<About />
-						</Route>
-						<Route exact path='/distanceinfo'>
-							<DistanceInfo />
-						</Route>
-						<Route exact path='/maskinfo'>
-							<MaskInfo />
-						</Route>
-						<Route exact path='/maskinfo'>
-							<MaskInfo />
 						</Route>
 						<Route exact path='/vaccineform'>
 							<VaccineForm />
