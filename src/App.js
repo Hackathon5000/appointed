@@ -8,7 +8,7 @@ import DistanceInfo from "./components/distanceInfo/distanceInfo";
 import MaskInfo from "./components/maskInfo/maskInfo";
 import Nav from "./components/Nav/nav";
 import About from "./components/about/about";
-import VaccineForm from "./components/form/vaccineForm.js";
+import VaccineForm from "./components/form/vaccineForm.jsx";
 
 function App() {
   return (
