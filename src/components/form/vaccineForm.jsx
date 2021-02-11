@@ -25,8 +25,10 @@ export default function VaccineForm() {
     position: relative;
     left: 525px;
   `;
-  const ButtonBackground = styled(Button)`
-    background-color: #1da4bb;
+  const ButtonColor = styled(Button)`
+    &&& {
+      background-color: #1da4bb;
+    }
   `;
   const StyledButtonText = styled(Button.Content)`
     color: #ffffff;
@@ -62,12 +64,12 @@ export default function VaccineForm() {
           placeholder="Enter your Zip Code"
           width={3}
         />
-        <ButtonBackground animated>
+        <ButtonColor animated>
           <StyledButtonText visible>REGISTER</StyledButtonText>
           <StyledButtonText hidden>
             <Icon name="arrow right" />
           </StyledButtonText>
-        </ButtonBackground>
+        </ButtonColor>
       </Form>{" "}
     </div>
   );
